@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="SCK-Ky-RW8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Schedule View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ScheduleViewController" customModule="BrushYourTeeth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="9Sg-xb-3vL">
+                                <rect key="frame" x="145" y="271" width="100" height="30"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Zrq-He-lre"/>
+                                    <constraint firstAttribute="width" constant="100" id="rOa-Mv-fdm"/>
+                                </constraints>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="666946800">
+                                    <!--2022-02-19 07:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="666989999">
+                                    <!--2022-02-19 18:59:59 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="en_US"/>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="AqJ-5I-gkO">
+                                <rect key="frame" x="145" y="369" width="100" height="31"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4kY-nC-pX9"/>
+                                    <constraint firstAttribute="height" constant="31" id="hH5-gM-hlX"/>
+                                </constraints>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="666990000">
+                                    <!--2022-02-19 19:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="667033199">
+                                    <!--2022-02-20 06:59:59 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your morning alert time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="bYL-fZ-AYv">
+                                <rect key="frame" x="70" y="243" width="250" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="by5-mb-bNY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose your bedtime alert:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hlo-bp-W8I">
+                                <rect key="frame" x="70" y="341" width="250" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="LQa-y2-4IC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CE7-7q-K3y">
+                                <rect key="frame" x="25" y="750" width="340" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="yL1-eh-9UL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create Schedule" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createSchedule:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Gd-xM-wlo"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clean teeth," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86b-YF-shQ">
+                                <rect key="frame" x="20" y="98" width="360" height="54"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everyday 🦷" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCm-eb-WQF">
+                                <rect key="frame" x="20" y="157" width="360" height="54"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="45"/>
+                                <color key="textColor" systemColor="systemPurpleColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CE7-7q-K3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="1Jz-Kf-p0v"/>
+                            <constraint firstItem="AqJ-5I-gkO" firstAttribute="top" secondItem="Hlo-bp-W8I" secondAttribute="bottom" constant="10" id="5A4-3i-t3Y"/>
+                            <constraint firstItem="bYL-fZ-AYv" firstAttribute="top" secondItem="mCm-eb-WQF" secondAttribute="bottom" constant="32" id="6zo-o8-cqN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="86b-YF-shQ" secondAttribute="trailing" constant="10" id="8iG-NZ-1kA"/>
+                            <constraint firstItem="Hlo-bp-W8I" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HED-oN-vZV"/>
+                            <constraint firstItem="AqJ-5I-gkO" firstAttribute="centerX" secondItem="Hlo-bp-W8I" secondAttribute="centerX" id="IZF-R2-IFw"/>
+                            <constraint firstItem="9Sg-xb-3vL" firstAttribute="top" secondItem="bYL-fZ-AYv" secondAttribute="bottom" constant="10" id="JBJ-1g-aSg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CE7-7q-K3y" secondAttribute="trailing" constant="25" id="O28-Cb-ut3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mCm-eb-WQF" secondAttribute="trailing" constant="10" id="RDo-I7-8GK"/>
+                            <constraint firstItem="mCm-eb-WQF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ShJ-xd-Zbo"/>
+                            <constraint firstItem="Hlo-bp-W8I" firstAttribute="top" secondItem="9Sg-xb-3vL" secondAttribute="bottom" constant="40" id="Urz-Yt-cBZ"/>
+                            <constraint firstItem="bYL-fZ-AYv" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ZWo-Ho-8H3"/>
+                            <constraint firstItem="CE7-7q-K3y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="aPr-Nb-1jO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CE7-7q-K3y" secondAttribute="bottom" constant="10" id="cp6-Zr-lLL"/>
+                            <constraint firstItem="9Sg-xb-3vL" firstAttribute="centerX" secondItem="bYL-fZ-AYv" secondAttribute="centerX" id="fKZ-9a-PGr"/>
+                            <constraint firstItem="86b-YF-shQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="igb-NG-y3N"/>
+                            <constraint firstItem="mCm-eb-WQF" firstAttribute="top" secondItem="86b-YF-shQ" secondAttribute="bottom" constant="5" id="ouM-Et-3Po"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CE7-7q-K3y" secondAttribute="trailing" constant="25" id="rIV-sK-3zo"/>
+                            <constraint firstItem="86b-YF-shQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="v3j-hG-nhe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="t4N-Ot-V9b">
+                        <barButtonItem key="backBarButtonItem" title=" " id="GWv-GU-F0V"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="morningDatePicker" destination="9Sg-xb-3vL" id="ZF7-ic-7ae"/>
+                        <outlet property="nightDatePicker" destination="AqJ-5I-gkO" id="EHk-Fa-sra"/>
+                        <segue destination="Nbt-Gf-XWv" kind="show" identifier="GoToProgress" id="9S9-ve-AE9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1111" y="26"/>
+        </scene>
+        <!--Weekly Progress 🦷-->
+        <scene sceneID="tRM-iV-yuX">
+            <objects>
+                <viewController id="Nbt-Gf-XWv" customClass="ProgressViewController" customModule="BrushYourTeeth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UQY-71-7ge">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tyX-9A-Irc">
+                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NWF-Ry-a3p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NWF-Ry-a3p" firstAttribute="trailing" secondItem="tyX-9A-Irc" secondAttribute="trailing" id="W12-1S-wJS"/>
+                            <constraint firstItem="NWF-Ry-a3p" firstAttribute="bottom" secondItem="tyX-9A-Irc" secondAttribute="bottom" id="aD9-Sp-woc"/>
+                            <constraint firstItem="tyX-9A-Irc" firstAttribute="leading" secondItem="NWF-Ry-a3p" secondAttribute="leading" id="cVU-Q8-sXQ"/>
+                            <constraint firstItem="tyX-9A-Irc" firstAttribute="top" secondItem="NWF-Ry-a3p" secondAttribute="top" id="f4F-fu-biC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weekly Progress 🦷" id="Hlk-4T-Uf5">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sqc-h5-Aa3"/>
+                        <barButtonItem key="rightBarButtonItem" image="gear" catalog="system" id="o6J-7f-r8G">
+                            <color key="tintColor" systemColor="systemPurpleColor"/>
+                            <connections>
+                                <segue destination="FVt-d5-kVh" kind="show" id="EJY-Tg-Mry"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="tyX-9A-Irc" id="6wy-dl-fJj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xhA-ne-rYo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1980" y="93.838862559241704"/>
+        </scene>
+        <!--Settings 🪥-->
+        <scene sceneID="0N6-Nj-8xG">
+            <objects>
+                <viewController id="FVt-d5-kVh" customClass="SettingsViewController" customModule="BrushYourTeeth" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LLp-8A-arj">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LIJ-ME-CUY">
+                                <rect key="frame" x="69" y="119" width="252" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="HTe-UV-xTW"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="252" id="Ro8-sf-ofK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Change Schedule"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Change Schedule" cornerStyle="dynamic">
+                                    <fontDescription key="titleFontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Yaf-aT-G9F" kind="unwind" unwindAction="unwindToOne:" id="e4v-yh-Gpo"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BY3-S0-8Zm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LIJ-ME-CUY" firstAttribute="centerX" secondItem="BY3-S0-8Zm" secondAttribute="centerX" id="T5b-N4-9l0"/>
+                            <constraint firstItem="LIJ-ME-CUY" firstAttribute="top" secondItem="BY3-S0-8Zm" secondAttribute="top" constant="31" id="cz6-qC-fJ4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Settings 🪥" id="Lu3-OB-mJA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hVU-nN-XXm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Yaf-aT-G9F" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2838" y="92"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="J08-lI-oN8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SCK-Ky-RW8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4rg-pH-tEC">
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qmi-OC-Vvc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0RA-Q2-azh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="164" y="93.842364532019715"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

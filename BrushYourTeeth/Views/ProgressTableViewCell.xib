@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProgressCell" rowHeight="106" id="KGk-i7-Jjw" customClass="ProgressTableViewCell" customModule="BrushYourTeeth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="416" height="106"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="416" height="106"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9uY-zh-1iW">
+                        <rect key="frame" x="40" y="33.5" width="120" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfw-7b-lGp">
+                                <rect key="frame" x="32" y="5" width="56" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="Morning Switch" translatesAutoresizingMaskIntoConstraints="NO" id="4ss-sl-wGT">
+                                <rect key="frame" x="35.5" y="27.5" width="51" height="31"/>
+                                <accessibility key="accessibilityConfiguration" label="ccccc"/>
+                                <color key="onTintColor" systemColor="systemYellowColor"/>
+                                <connections>
+                                    <action selector="morningSwitchToggled:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Djf-9j-buk"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="height" priority="900" constant="68" id="4NB-hF-rUI"/>
+                            <constraint firstItem="gfw-7b-lGp" firstAttribute="centerX" secondItem="9uY-zh-1iW" secondAttribute="centerX" id="6vN-cd-kaP"/>
+                            <constraint firstItem="4ss-sl-wGT" firstAttribute="centerX" secondItem="9uY-zh-1iW" secondAttribute="centerX" id="82V-af-m83"/>
+                            <constraint firstItem="4ss-sl-wGT" firstAttribute="top" secondItem="gfw-7b-lGp" secondAttribute="bottom" constant="5" id="PQ2-11-d58"/>
+                            <constraint firstItem="gfw-7b-lGp" firstAttribute="top" secondItem="9uY-zh-1iW" secondAttribute="top" constant="5" id="PaD-tE-Ez9"/>
+                            <constraint firstAttribute="width" constant="120" id="Sy2-2z-8Cl"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-fw-s3G">
+                        <rect key="frame" x="12" y="10" width="57.5" height="18.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pW4-uT-S2D">
+                        <rect key="frame" x="266" y="33.5" width="120" height="68"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Night" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ppy-xH-l1w">
+                                <rect key="frame" x="42" y="5" width="36" height="17.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" title="NightSwitch" translatesAutoresizingMaskIntoConstraints="NO" id="UqN-Vz-Tvt">
+                                <rect key="frame" x="35.5" y="27.5" width="51" height="31"/>
+                                <color key="onTintColor" systemColor="tintColor"/>
+                                <connections>
+                                    <action selector="morningSwitchToggled:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Kj8-7f-qup"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="5uK-bB-oGt"/>
+                            <constraint firstItem="UqN-Vz-Tvt" firstAttribute="top" secondItem="Ppy-xH-l1w" secondAttribute="bottom" constant="5" id="FEx-mu-QXn"/>
+                            <constraint firstItem="Ppy-xH-l1w" firstAttribute="top" secondItem="pW4-uT-S2D" secondAttribute="top" constant="5" id="Hwx-fT-qJg"/>
+                            <constraint firstAttribute="height" priority="900" constant="68" id="ZfY-3s-Grj"/>
+                            <constraint firstItem="Ppy-xH-l1w" firstAttribute="centerX" secondItem="pW4-uT-S2D" secondAttribute="centerX" id="c4A-cy-XBS"/>
+                            <constraint firstItem="UqN-Vz-Tvt" firstAttribute="centerX" secondItem="pW4-uT-S2D" secondAttribute="centerX" id="eFQ-Aq-TAk"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9uY-zh-1iW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="EbP-KC-i38"/>
+                    <constraint firstItem="9uY-zh-1iW" firstAttribute="top" secondItem="Mcr-fw-s3G" secondAttribute="bottom" constant="5" id="JBw-ax-HmQ"/>
+                    <constraint firstItem="Mcr-fw-s3G" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="Tkv-ro-yjn"/>
+                    <constraint firstItem="Mcr-fw-s3G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Zx6-Ls-UBc"/>
+                    <constraint firstAttribute="bottom" secondItem="9uY-zh-1iW" secondAttribute="bottom" constant="4.5" id="cM9-Vw-7rR"/>
+                    <constraint firstItem="pW4-uT-S2D" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="33.5" id="rHl-Xp-c4r"/>
+                    <constraint firstAttribute="trailing" secondItem="pW4-uT-S2D" secondAttribute="trailing" constant="30" id="uF2-Vc-heB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="morningSwitch" destination="4ss-sl-wGT" id="azA-5g-PFF"/>
+                <outlet property="morningTextLabel" destination="gfw-7b-lGp" id="PdD-XF-nWe"/>
+                <outlet property="nightSwitch" destination="UqN-Vz-Tvt" id="99O-WX-bF8"/>
+                <outlet property="nightTextLabel" destination="Ppy-xH-l1w" id="TLg-ew-VV3"/>
+                <outlet property="weekDays" destination="Mcr-fw-s3G" id="FyQ-53-6UK"/>
+            </connections>
+            <point key="canvasLocation" x="201" y="16"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
